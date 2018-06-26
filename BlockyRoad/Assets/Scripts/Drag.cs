@@ -5,48 +5,51 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    public float speed = 0.0005f;
+    public float Speed = 0.02f;
+    public Rigidbody rb;
+    Vector3 move = new Vector3(0, 0, 10);
+    public bool TouchingL = false;
+    public bool TouchingR = false;
 
     void start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
-
-    }
-
-    void OnTriggerStay(Collider c)
-    {
-        if (c.gameObject.tag != "terrain")
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+        if (Physics.Raycast(ray, out hit))
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-            if (Physics.Raycast(ray, out hit))
+            if (hit.rigidbody != null)
             {
-                if (hit.rigidbody != null)
+                if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
                 {
-                    if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
+                    Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                    if (touchDeltaPosition.x > 1 && TouchingR == false)
                     {
-                        Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                        if (touchDeltaPosition.x > 1)
-                        {
-                            transform.Translate(0, 0.01f, 0);
-                        }
-                        if (touchDeltaPosition.x < 1)
-                        {
-                            transform.Translate(0, -0.01f, 0);
-                        }
+                        TouchingL = false;
+                        rb.MovePosition(transform.position + move * Speed);
+                    }
+                    if (touchDeltaPosition.x < 1&& TouchingL == false)
+                    {
+                        TouchingR = false;
+                        rb.MovePosition(transform.position - move  * Speed);
                     }
                 }
             }
         }
     }
-    void OnCollisionEnter(Collision d)
+
+    void OnTriggerEnter(Collider c)
     {
-        if (d.gameObject.tag == "terrain")
+        if (c.gameObject.tag == "terrainL")
         {
-            Debug.Log("ok");
+            TouchingL = true;
+        }
+        if (c.gameObject.tag == "terrainR")
+        {
+            TouchingR = true;
         }
     }
 }
