@@ -220,6 +220,8 @@ GameObject:
   - component: {fileID: 33190541967183488}
   - component: {fileID: 23627460430757020}
   - component: {fileID: 95531753952621336}
+  - component: {fileID: 65365219035104940}
+  - component: {fileID: 114922019580066068}
   m_Layer: 0
   m_Name: truck
   m_TagString: Untagged
@@ -913,6 +915,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1415919652193320}
   m_Mesh: {fileID: 4300000, guid: 18193df1d5dc1d641ae8351345a01bbe, type: 3}
+--- !u!65 &65365219035104940
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904428543140288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.142859, y: 3.8698306, z: 13.705846}
+  m_Center: {x: 0.009773974, y: -0.934915, z: 5.731386}
 --- !u!95 &95130359381421628
 Animator:
   serializedVersion: 3
@@ -1129,3 +1143,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114922019580066068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904428543140288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ac355e174e654c879cd8c34c54f0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1

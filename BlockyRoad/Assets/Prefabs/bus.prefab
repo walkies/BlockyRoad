@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33462707923452076}
   - component: {fileID: 23890381112529764}
   - component: {fileID: 95379119665179376}
+  - component: {fileID: 65801559526527406}
   m_Layer: 0
   m_Name: bus
   m_TagString: Untagged
@@ -534,6 +535,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1535230843388748}
   m_Mesh: {fileID: 4300000, guid: 18193df1d5dc1d641ae8351345a01bbe, type: 3}
+--- !u!65 &65801559526527406
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158995835120140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.722917, y: 2.0614927, z: 2.3572412}
+  m_Center: {x: -4.0891986, y: -0.0002685189, z: 0.0050415397}
 --- !u!95 &95286566482359790
 Animator:
   serializedVersion: 3
