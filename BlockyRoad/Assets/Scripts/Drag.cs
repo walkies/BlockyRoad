@@ -5,51 +5,45 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    public float Speed = 0.02f;
+    public float Speed = 0.01f;
     public Rigidbody rb;
+
     Vector3 move = new Vector3(0, 0, 10);
-    public bool TouchingL = false;
-    public bool TouchingR = false;
 
     void start()
     {
-        rb = GetComponent<Rigidbody>();
     }
     void Update()
     {
+        Vector3 clampedPosition = transform.position;
+        clampedPosition.z = Mathf.Clamp(clampedPosition.z, -5, -1);
+        clampedPosition.y = Mathf.Clamp(clampedPosition.y, 0.77f, 0.77f);
+        clampedPosition.x = Mathf.Clamp(clampedPosition.x, 0, 0);
+        transform.position = clampedPosition;
+
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.rigidbody != null)
+            if (hit.rigidbody == rb)
             {
                 if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
                 {
                     Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                    if (touchDeltaPosition.x > 1 && TouchingR == false)
+                    if (touchDeltaPosition.x > 1)
                     {
-                        TouchingL = false;
                         rb.MovePosition(transform.position + move * Speed);
                     }
-                    if (touchDeltaPosition.x < 1&& TouchingL == false)
+                    if (touchDeltaPosition.x < 1)
                     {
-                        TouchingR = false;
                         rb.MovePosition(transform.position - move  * Speed);
                     }
                 }
+                else if(Input.GetTouch(0).phase == TouchPhase.Ended)
+                {
+                    Superscript.Move();
+                }
             }
-        }
-    }
-
-    void OnTriggerEnter(Collider c)
-    {
-        if (c.gameObject.tag == "terrainL")
-        {
-            TouchingL = true;
-        }
-        if (c.gameObject.tag == "terrainR")
-        {
-            TouchingR = true;
         }
     }
 }
