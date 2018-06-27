@@ -16,7 +16,7 @@ public class Drag : MonoBehaviour
     void Update()
     {
         Vector3 clampedPosition = transform.position;
-        clampedPosition.z = Mathf.Clamp(clampedPosition.z, -5, -1);
+        clampedPosition.z = Mathf.Clamp(clampedPosition.z, -4.5f, -1);
         clampedPosition.y = Mathf.Clamp(clampedPosition.y, 0.77f, 0.77f);
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, 0, 0);
         transform.position = clampedPosition;

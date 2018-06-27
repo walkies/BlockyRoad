@@ -7,7 +7,7 @@ public class Drag1 : MonoBehaviour {
     public float Speed = 0.01f;
     public Rigidbody rb2;
 
-    Vector3 move = new Vector3(0, 0, 10);
+    Vector3 move = new Vector3(-5, 0, 0);
 
     void start()
     {
@@ -17,7 +17,7 @@ public class Drag1 : MonoBehaviour {
         Vector3 clampedPosition2 = transform.position;
         clampedPosition2.z = Mathf.Clamp(clampedPosition2.z, -1, -1);
         clampedPosition2.y = Mathf.Clamp(clampedPosition2.y, 1.5f, 1.5f);
-        clampedPosition2.x = Mathf.Clamp(2, 0, 5);
+        clampedPosition2.x = Mathf.Clamp(clampedPosition2.x, -5, 5);
         transform.position = clampedPosition2;
 
 
@@ -30,11 +30,11 @@ public class Drag1 : MonoBehaviour {
                 if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
                 {
                     Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                    if (touchDeltaPosition.x > 1)
+                    if (touchDeltaPosition.y > 1)
                     {
                         rb2.MovePosition(transform.position + move * Speed);
                     }
-                    if (touchDeltaPosition.x < 1)
+                    if (touchDeltaPosition.y < 1)
                     {
                         rb2.MovePosition(transform.position - move * Speed);
                     }
