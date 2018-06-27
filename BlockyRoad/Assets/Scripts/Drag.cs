@@ -15,11 +15,11 @@ public class Drag : MonoBehaviour
     }
     void Update()
     {
-        Vector3 clampedPosition = transform.position;
-        clampedPosition.z = Mathf.Clamp(clampedPosition.z, -4.5f, -1);
-        clampedPosition.y = Mathf.Clamp(clampedPosition.y, 0.77f, 0.77f);
-        clampedPosition.x = Mathf.Clamp(clampedPosition.x, 0, 0);
-        transform.position = clampedPosition;
+            Vector3 clampedPosition = transform.position;
+            clampedPosition.z = Mathf.Clamp(clampedPosition.z, -4.5f, -1);
+            clampedPosition.y = Mathf.Clamp(clampedPosition.y, 0.77f, 0.77f);
+            clampedPosition.x = Mathf.Clamp(clampedPosition.x, 0, 0);
+            transform.position = clampedPosition;
 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -34,14 +34,14 @@ public class Drag : MonoBehaviour
                     {
                         rb.MovePosition(transform.position + move * Speed);
                     }
-                    if (touchDeltaPosition.x < 1)
+                    else if (touchDeltaPosition.x < 1)
                     {
                         rb.MovePosition(transform.position - move  * Speed);
                     }
                 }
                 else if(Input.GetTouch(0).phase == TouchPhase.Ended)
                 {
-                    Superscript.Move();
+                    
                 }
             }
         }

@@ -4,11 +4,6 @@ using UnityEngine;
 
 public static class Superscript
 {
-    public static int TilEmpty; 
-    public static GameObject zero = GameObject.FindGameObjectWithTag("zero");
-    public static void Move()
-    {
-        TilEmpty++;  
-    }
+    public static int TilEmpty = 0; 
 
 }

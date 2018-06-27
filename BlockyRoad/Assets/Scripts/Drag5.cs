@@ -15,11 +15,12 @@ public class Drag5 : MonoBehaviour
     }
     void Update()
     {
-        Vector3 clampedPosition6 = transform.position;
-        clampedPosition6.z = Mathf.Clamp(clampedPosition6.z, 1, 1);
-        clampedPosition6.y = Mathf.Clamp(clampedPosition6.y, 1.1f, 1.1f);
-        clampedPosition6.x = Mathf.Clamp(clampedPosition6.x, 0, 6);
-        transform.position = clampedPosition6;
+
+            Vector3 clampedPosition6 = transform.position;
+            clampedPosition6.z = Mathf.Clamp(clampedPosition6.z, 1, 1);
+            clampedPosition6.y = Mathf.Clamp(clampedPosition6.y, 1.1f, 1.1f);
+            clampedPosition6.x = Mathf.Clamp(clampedPosition6.x, 0, 6);
+            transform.position = clampedPosition6;
 
 
         RaycastHit hit;
@@ -35,14 +36,14 @@ public class Drag5 : MonoBehaviour
                     {
                         rb6.MovePosition(transform.position + move * Speed);
                     }
-                    if (touchDeltaPosition.y < 1)
+                    else if (touchDeltaPosition.y < 1)
                     {
                         rb6.MovePosition(transform.position - move * Speed);
                     }
                 }
                 if (Input.GetTouch(0).phase == TouchPhase.Ended)
                 {
-                    Superscript.Move();
+                  
                 }
             }
         }

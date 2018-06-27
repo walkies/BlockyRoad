@@ -19,11 +19,13 @@ public class Agent : MonoBehaviour
     }
     void Update()
     {
-        Vector3 clampedPosition1 = transform.position;
-        clampedPosition1.z = Mathf.Clamp(clampedPosition1.z, -5, 1);
-        clampedPosition1.y = Mathf.Clamp(clampedPosition1.y, 1, 1f);
-        clampedPosition1.x = Mathf.Clamp(clampedPosition1.x, 3, 3f);
-        transform.position = clampedPosition1;
+
+            Vector3 clampedPosition1 = transform.position;
+            clampedPosition1.z = Mathf.Clamp(clampedPosition1.z, -5, 1);
+            clampedPosition1.y = Mathf.Clamp(clampedPosition1.y, 1, 1f);
+            clampedPosition1.x = Mathf.Clamp(clampedPosition1.x, 3, 3f);
+            transform.position = clampedPosition1;
+
 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -39,15 +41,16 @@ public class Agent : MonoBehaviour
                         TouchingL = false;
                         rb1.MovePosition(transform.position + move * Speed);
                     }
-                    if (touchDeltaPosition.x < 1 && TouchingL == false)
+                    else if (touchDeltaPosition.x < 1 && TouchingL == false)
                     {
                         TouchingR = false;
                         rb1.MovePosition(transform.position - move * Speed);
                     }
                 }
-                if (Input.GetTouch(0).phase == TouchPhase.Ended)
-                {
-                    Superscript.Move();
+                else if (Input.GetTouch(0).phase == TouchPhase.Ended)
+                {     
+                    Superscript.TilEmpty++;
+                    Debug.Log("Thie one elly");
                 }
             }
         }
