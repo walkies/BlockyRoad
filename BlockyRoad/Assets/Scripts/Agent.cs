@@ -5,27 +5,51 @@ using UnityEngine;
 public class Agent : MonoBehaviour
 {
 
-    public float Speed = 0.01f;
+    public float Speed = 1f;
     public Rigidbody rb1;
+    Vector3 movealt = new Vector3(Mathf.Round(-1), Mathf.Round(0), Mathf.Round(1));
+    Vector3 move = new Vector3(Mathf.Round(0), Mathf.Round(0), Mathf.Round(1));
+    public float height;
+    public float sideBounds;
+    public float dirMax;
+    public float dirMin;
 
-    Vector3 move = new Vector3(0, 0, 10);
+    public enum Orientation
+    {
+        X,
+        Y
+    }
 
-    public bool TouchingL = false;
-    public bool TouchingR = false;
+    public Orientation direction;
 
     void start()
     {
-        
+        if (direction == Orientation.X)
+        {
+
+        }
     }
+
     void Update()
     {
+        if (direction == Orientation.X)
+        {
 
-            Vector3 clampedPosition1 = transform.position;
-            clampedPosition1.z = Mathf.Clamp(clampedPosition1.z, -5, 1);
-            clampedPosition1.y = Mathf.Clamp(clampedPosition1.y, 1, 1f);
-            clampedPosition1.x = Mathf.Clamp(clampedPosition1.x, 3, 3f);
-            transform.position = clampedPosition1;
+            Vector3 clampedPosition = transform.position;
+            clampedPosition.z = Mathf.Clamp(clampedPosition.z, dirMin, dirMax);
+            clampedPosition.y = Mathf.Clamp(clampedPosition.y, height, height);
+            clampedPosition.x = Mathf.Clamp(clampedPosition.x, sideBounds, sideBounds);
+            transform.position = clampedPosition;
+        }
+        else
+        {
 
+            Vector3 clampedPosition = transform.position;
+            clampedPosition.z = Mathf.Clamp(clampedPosition.z, sideBounds, sideBounds);
+            clampedPosition.y = Mathf.Clamp(clampedPosition.y, height, height);
+            clampedPosition.x = Mathf.Clamp(clampedPosition.x, dirMin, dirMax);
+            transform.position = clampedPosition;
+        }
 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
@@ -35,16 +59,29 @@ public class Agent : MonoBehaviour
             {
                 if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
                 {
-                    Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                    if (touchDeltaPosition.x > 1 && TouchingR == false)
+                    if (direction == Orientation.X)
                     {
-                        TouchingL = false;
-                        rb1.MovePosition(transform.position + move * Speed);
+                        Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                        if (touchDeltaPosition.x > 0.5)
+                        {
+                            rb1.MovePosition(transform.position + move);
+                        }
+                        else if (touchDeltaPosition.x < 0.5)
+                        {
+                            rb1.MovePosition(transform.position - move);
+                        }
                     }
-                    else if (touchDeltaPosition.x < 1 && TouchingL == false)
+                    else
                     {
-                        TouchingR = false;
-                        rb1.MovePosition(transform.position - move * Speed);
+                        Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                        if (touchDeltaPosition.y > 0.5)
+                        {
+                            rb1.MovePosition(transform.position + movealt);
+                        }
+                        else if (touchDeltaPosition.y < 0.5)
+                        {
+                            rb1.MovePosition(transform.position - movealt);
+                        }
                     }
                 }
                 else if (Input.GetTouch(0).phase == TouchPhase.Ended)
@@ -60,11 +97,11 @@ public class Agent : MonoBehaviour
     {
         if (c.gameObject.tag == "terrainL")
         {
-            TouchingL = true;
+
         }
         if (c.gameObject.tag == "terrainR")
         {
-            TouchingR = true;
+
         }
     }
 }

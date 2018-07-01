@@ -52,12 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Agent.cs" />
-     <Compile Include="Assets\Scripts\Drag.cs" />
-     <Compile Include="Assets\Scripts\Drag1.cs" />
-     <Compile Include="Assets\Scripts\Drag2.cs" />
-     <Compile Include="Assets\Scripts\Drag3.cs" />
-     <Compile Include="Assets\Scripts\Drag4.cs" />
-     <Compile Include="Assets\Scripts\Drag5.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
      <Compile Include="Assets\Scripts\Superscript.cs" />
  <Reference Include="UnityEditor.StandardEvents">
