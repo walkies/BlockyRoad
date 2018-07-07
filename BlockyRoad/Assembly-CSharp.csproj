@@ -52,8 +52,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Agent.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Finish.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />
+     <Compile Include="Assets\Scripts\parralax.cs" />
+     <Compile Include="Assets\Scripts\ScriptableAudio.cs" />
      <Compile Include="Assets\Scripts\Superscript.cs" />
+     <Compile Include="Assets\Scripts\UIScroller.cs" />
+     <Compile Include="Assets\Scripts\Viewchanger.cs" />
+     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
+     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>E:/Unity/BlockRoad/BlockyRoad/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

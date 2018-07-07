@@ -64,11 +64,11 @@ public class Agent : MonoBehaviour
                         Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
                         if (touchDeltaPosition.x > 0.5)
                         {
-                            rb1.MovePosition(transform.position + move);
+                            rb1.MovePosition(transform.position + move * Time.deltaTime * 5);
                         }
                         else if (touchDeltaPosition.x < 0.5)
                         {
-                            rb1.MovePosition(transform.position - move);
+                            rb1.MovePosition(transform.position - move * Time.deltaTime * 5);
                         }
                     }
                     else
@@ -76,11 +76,11 @@ public class Agent : MonoBehaviour
                         Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
                         if (touchDeltaPosition.y > 0.5)
                         {
-                            rb1.MovePosition(transform.position + movealt);
+                            rb1.MovePosition(transform.position + movealt * Time.deltaTime * 5);
                         }
                         else if (touchDeltaPosition.y < 0.5)
                         {
-                            rb1.MovePosition(transform.position - movealt);
+                            rb1.MovePosition(transform.position - movealt * Time.deltaTime * 5);
                         }
                     }
                 }
