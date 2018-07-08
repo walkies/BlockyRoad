@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Viewchanger : MonoBehaviour
 {
-    GameObject mainMenu;
-    GameObject levels;
-    GameObject options;
-    GameObject shop;
-    GameObject achievements;
+    public GameObject mainMenu;
+    public GameObject levels;
+    public GameObject options;
+    public GameObject shop;
+    public GameObject achievements;
 
     void Start()
     {
@@ -24,6 +24,15 @@ public class Viewchanger : MonoBehaviour
     public void PlayLevel(string name)
     {
         SceneManager.LoadScene(name, LoadSceneMode.Single);
+    }
+
+    public void Levels()
+    {
+        mainMenu.SetActive(false);
+        levels.SetActive(true);
+        options.SetActive(false);
+        shop.SetActive(false);
+        achievements.SetActive(false);
     }
 
     public void Back()

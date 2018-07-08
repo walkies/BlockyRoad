@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\parralax.cs" />
      <Compile Include="Assets\Scripts\ScriptableAudio.cs" />
      <Compile Include="Assets\Scripts\Superscript.cs" />
+     <Compile Include="Assets\Scripts\UIScript.cs" />
      <Compile Include="Assets\Scripts\UIScroller.cs" />
      <Compile Include="Assets\Scripts\Viewchanger.cs" />
      <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />

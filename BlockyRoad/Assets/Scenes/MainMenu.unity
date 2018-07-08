@@ -255,7 +255,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00015258789}
-  m_SizeDelta: {x: 0, y: 100}
+  m_SizeDelta: {x: -163.64034, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &85852153
 MonoBehaviour:
@@ -900,7 +900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &156042311
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2251,6 +2251,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 337089176}
+  - component: {fileID: 337089178}
+  - component: {fileID: 337089177}
   m_Layer: 0
   m_Name: Play
   m_TagString: Untagged
@@ -2277,6 +2279,62 @@ RectTransform:
   m_AnchoredPosition: {x: 16.329926, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &337089177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337089175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 600, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
+--- !u!114 &337089178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 337089175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 337089177}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: Levels
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 156042310}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &349012898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,6 +2405,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d1691b14881da5448424b2305777c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenu: {fileID: 1926568055}
+  levels: {fileID: 972912519}
+  options: {fileID: 1425958609}
+  shop: {fileID: 856143192}
+  achievements: {fileID: 1522045242}
 --- !u!4 &386884767
 Transform:
   m_ObjectHideFlags: 0
@@ -2593,7 +2656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000018100993}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -128.67542}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &413645799
@@ -6310,7 +6373,7 @@ GameObject:
   - component: {fileID: 856143195}
   - component: {fileID: 856143194}
   m_Layer: 0
-  m_Name: Shop
+  m_Name: newShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10845,7 +10908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425958610}
   m_Layer: 5
-  m_Name: Options
+  m_Name: Settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11629,7 +11692,7 @@ GameObject:
   - component: {fileID: 1522045245}
   - component: {fileID: 1522045244}
   m_Layer: 5
-  m_Name: Achievements
+  m_Name: newAchievements
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
