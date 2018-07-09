@@ -5,17 +5,18 @@ using UnityEngine;
 
 public class UIScript : MonoBehaviour
 {
-
-
     public Collider rb1;
     public UnityEvent myEvent;
     public UnityEvent myEvent2;
 
+    int TapCount;
+    public float MaxDubbleTapTime = 1;
+    float NewTime;
+
     void Start()
     {
-
+        TapCount = 0;
     }
-
 
     void Update()
     {
@@ -25,13 +26,33 @@ public class UIScript : MonoBehaviour
         {
             if (hit.collider == rb1)
             {
-                if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Stationary))
+                if (Input.touchCount == 1)
                 {
-                    myEvent.Invoke();
-                    myEvent2.Invoke();
+                    Touch touch = Input.GetTouch(0);
+                    if (Input.GetTouch(0).phase == TouchPhase.Ended)
+                    {
+                        TapCount += 1;
+                        NewTime = Time.time + MaxDubbleTapTime;
+                    }
+                    if (Time.time > NewTime)
+                    {
+                        TapCount = 0;
+                    }
+                    else if (TapCount == 2 && Time.time <= NewTime)
+                    {
+                        myEvent.Invoke();
+                        myEvent2.Invoke();
+                        TapCount = 0;
+                    }
+                   
                 }
             }
         }
+        
     }
-
 }
+
+
+
+
+

@@ -193,6 +193,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 20795157}
+  - component: {fileID: 20795159}
+  - component: {fileID: 20795158}
   m_Layer: 0
   m_Name: Level3
   m_TagString: Untagged
@@ -219,6 +221,52 @@ RectTransform:
   m_AnchoredPosition: {x: 110.485146, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &20795158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20795156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
+--- !u!114 &20795159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20795156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 20795158}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: PlayLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lvl 3
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
 --- !u!1 &85852151
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +942,8 @@ GameObject:
   - component: {fileID: 156042311}
   - component: {fileID: 156042313}
   - component: {fileID: 156042312}
+  - component: {fileID: 156042315}
+  - component: {fileID: 156042314}
   m_Layer: 0
   m_Name: Backbutton
   m_TagString: Untagged
@@ -953,6 +1003,63 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156042310}
+--- !u!65 &156042314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156042310}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 300, y: 100, z: 500}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &156042315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156042310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 156042314}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 156042310}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
 --- !u!1 &179017318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +1974,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 297421557}
+  - component: {fileID: 297421559}
+  - component: {fileID: 297421558}
   m_Layer: 0
   m_Name: Level4
   m_TagString: Untagged
@@ -1893,6 +2002,52 @@ RectTransform:
   m_AnchoredPosition: {x: 204.08081, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &297421558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297421556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 297421559}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: PlayLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lvl 4
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
+--- !u!65 &297421559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 297421556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
 --- !u!1 &297708669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2444,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 800, y: 600, z: 450}
+  m_Size: {x: 800, y: 500, z: 450}
   m_Center: {x: 0, y: -50, z: 0}
 --- !u!114 &337089178
 MonoBehaviour:
@@ -2335,6 +2490,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
 --- !u!1 &349012898
 GameObject:
   m_ObjectHideFlags: 0
@@ -6100,6 +6256,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 816232752}
+  - component: {fileID: 816232753}
+  - component: {fileID: 816232754}
   m_Layer: 0
   m_Name: Achievements
   m_TagString: Untagged
@@ -6126,6 +6284,63 @@ RectTransform:
   m_AnchoredPosition: {x: 204.08081, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &816232753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816232751}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
+--- !u!114 &816232754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816232751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 816232753}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: Achievements
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 156042310}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
 --- !u!1 &829080856
 GameObject:
   m_ObjectHideFlags: 0
@@ -6942,6 +7157,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 916142068}
+  - component: {fileID: 916142070}
+  - component: {fileID: 916142069}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -6968,6 +7185,52 @@ RectTransform:
   m_AnchoredPosition: {x: -77.90524, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &916142069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916142067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 916142070}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: PlayLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lvl 1
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
+--- !u!65 &916142070
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 916142067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
 --- !u!1 &917705670
 GameObject:
   m_ObjectHideFlags: 0
@@ -7144,6 +7407,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 921080530}
+  - component: {fileID: 921080532}
+  - component: {fileID: 921080531}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -7170,6 +7435,52 @@ RectTransform:
   m_AnchoredPosition: {x: 16.329926, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &921080531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921080529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 921080532}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: PlayLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Lvl 2
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
+--- !u!65 &921080532
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921080529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
 --- !u!1 &930323023
 GameObject:
   m_ObjectHideFlags: 0
@@ -13917,6 +14228,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1775226054}
+  - component: {fileID: 1775226055}
+  - component: {fileID: 1775226056}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -13943,6 +14256,63 @@ RectTransform:
   m_AnchoredPosition: {x: 110.485146, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1775226055
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1775226053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
+--- !u!114 &1775226056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1775226053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 1775226055}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: Shop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 156042310}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
 --- !u!1 &1779163476
 GameObject:
   m_ObjectHideFlags: 0
@@ -14746,6 +15116,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1874938433}
+  - component: {fileID: 1874938434}
+  - component: {fileID: 1874938435}
   m_Layer: 0
   m_Name: Options
   m_TagString: Untagged
@@ -14772,6 +15144,63 @@ RectTransform:
   m_AnchoredPosition: {x: -77.90524, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1874938434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1874938432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 450}
+  m_Center: {x: 0, y: -50, z: 0}
+--- !u!114 &1874938435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1874938432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 1874938434}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 386884766}
+        m_MethodName: Options
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 156042310}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  MaxDubbleTapTime: 1
 --- !u!1 &1919110613
 GameObject:
   m_ObjectHideFlags: 0
