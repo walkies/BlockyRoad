@@ -10,7 +10,7 @@ public class UIScript : MonoBehaviour
     public UnityEvent myEvent2;
 
     int TapCount;
-    public float MaxDubbleTapTime = 1;
+    public float MaxDubbleTapTime = 0.5f;
     float NewTime;
 
     void Start()
