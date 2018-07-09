@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Agent : MonoBehaviour
 {
 
     public float Speed = 1f;
     public Rigidbody rb1;
+    public UnityEvent moveEvent;
     Vector3 movealt = new Vector3(Mathf.Round(-1), Mathf.Round(0), Mathf.Round(1));
     Vector3 move = new Vector3(Mathf.Round(0), Mathf.Round(0), Mathf.Round(1));
     public float height;
@@ -85,7 +87,8 @@ public class Agent : MonoBehaviour
                     }
                 }
                 else if (Input.GetTouch(0).phase == TouchPhase.Ended)
-                {     
+                {
+                    moveEvent.Invoke();
                     Superscript.TilEmpty++;
                     Debug.Log("Thie one elly");
                 }
