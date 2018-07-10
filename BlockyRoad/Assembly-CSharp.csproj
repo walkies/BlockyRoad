@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Agent.cs" />
      <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\Coins.cs" />
      <Compile Include="Assets\Scripts\Finish.cs" />
      <Compile Include="Assets\Scripts\FuelNeedle.cs" />
      <Compile Include="Assets\Scripts\Manager.cs" />

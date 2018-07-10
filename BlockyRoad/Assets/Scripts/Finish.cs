@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Finish : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class Finish : MonoBehaviour {
     public Text timeTaken;
     public Text moves;
     public Text coinsEarned;
-    public Manager mang;
+    public UnityEvent myEvent;
 
     void Start ()
     {
@@ -26,17 +27,15 @@ public class Finish : MonoBehaviour {
     {
         if (col.gameObject.CompareTag("Player"))
         {
-            endPanel.SetActive(true);
             StartCoroutine("EndLevel");
-            mang.SaveCoins();
-            Superscript.SaveString(("coins"), mang.currentCoins.ToString());
-            StopCoroutine("EndLevel");
+            endPanel.SetActive(true);
+            myEvent.Invoke();
         }
     }
     public IEnumerator EndLevel()
     {
         yield return new WaitForSeconds(1);
-        timeTaken.gameObject.SetActive(true);
+        timeTaken.gameObject.SetActive(true);  
         moves.gameObject.SetActive(true);
         coinsEarned.gameObject.SetActive(true);
         Time.timeScale = 0;

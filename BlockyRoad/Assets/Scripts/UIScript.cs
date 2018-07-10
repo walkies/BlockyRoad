@@ -15,6 +15,7 @@ public class UIScript : MonoBehaviour
 
     void Start()
     {
+
         TapCount = 0;
     }
 

@@ -13,7 +13,7 @@ public class Manager : MonoBehaviour {
 
     void Start ()
     {
-        
+
     }
 
 	void Update ()
@@ -23,9 +23,11 @@ public class Manager : MonoBehaviour {
         timeText.text = "" + Time.timeSinceLevelLoad.ToString("0.00");
         coinsText.text = "" + (coinReward -_coin - Superscript.TilEmpty);
     }
+
     public void SaveCoins()
     {
         var _coin = (int)Time.timeSinceLevelLoad;
         currentCoins = (coinReward - _coin - Superscript.TilEmpty);
+        Superscript.SaveInt(PlayerPrefs.GetInt("coins") + currentCoins);
     }
 }

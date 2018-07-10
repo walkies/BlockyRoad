@@ -13,7 +13,7 @@ public class Viewchanger : MonoBehaviour
 
     void Start()
     {
-       
+        
     }
 
     void Update()

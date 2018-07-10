@@ -99,17 +99,5 @@ public class Agent : MonoBehaviour
             }
         }
     }
-
-    void OnTriggerEnter(Collider c)
-    {
-        if (c.gameObject.tag == "terrainL")
-        {
-
-        }
-        if (c.gameObject.tag == "terrainR")
-        {
-
-        }
-    }
 }
 

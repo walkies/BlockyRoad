@@ -6,14 +6,8 @@ public static class Superscript
 {
     public static int TilEmpty = 0;
 
-    public static void SaveString(string name, string value)
+    public static void SaveInt(int value)
     {
-        PlayerPrefs.SetString(name, value);
+        PlayerPrefs.SetInt("coins", value);
     }
-
-    public static string GetString(string name)
-    {
-        return PlayerPrefs.GetString(name);
-    }
-
 }
