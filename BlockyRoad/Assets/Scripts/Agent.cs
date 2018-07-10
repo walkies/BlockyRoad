@@ -8,6 +8,7 @@ public class Agent : MonoBehaviour
 
     public float Speed = 1f;
     public Rigidbody rb1;
+    public Collider col;
     public UnityEvent moveEvent;
     Vector3 movealt = new Vector3(Mathf.Round(-1), Mathf.Round(0), Mathf.Round(1));
     Vector3 move = new Vector3(Mathf.Round(0), Mathf.Round(0), Mathf.Round(1));
@@ -57,40 +58,43 @@ public class Agent : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.rigidbody == rb1)
+            if (hit.collider == col)
             {
-                if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
+                if (Input.touchCount == 1)
                 {
-                    if (direction == Orientation.X)
+                    if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Moved))
                     {
-                        Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                        if (touchDeltaPosition.x > 0.5)
+                        if (direction == Orientation.X)
                         {
-                            rb1.MovePosition(transform.position + move * Time.deltaTime * 5);
+                            Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                            if (touchDeltaPosition.x > 0.5)
+                            {
+                                rb1.MovePosition(transform.position + move * Time.deltaTime * 5);
+                            }
+                            else if (touchDeltaPosition.x < 0.5)
+                            {
+                                rb1.MovePosition(transform.position - move * Time.deltaTime * 5);
+                            }
                         }
-                        else if (touchDeltaPosition.x < 0.5)
+                        else
                         {
-                            rb1.MovePosition(transform.position - move * Time.deltaTime * 5);
+                            Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+                            if (touchDeltaPosition.y > 0.5)
+                            {
+                                rb1.MovePosition(transform.position + movealt * Time.deltaTime * 5);
+                            }
+                            else if (touchDeltaPosition.y < 0.5)
+                            {
+                                rb1.MovePosition(transform.position - movealt * Time.deltaTime * 5);
+                            }
                         }
                     }
-                    else
+                    else if (Input.GetTouch(0).phase == TouchPhase.Ended)
                     {
-                        Vector3 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
-                        if (touchDeltaPosition.y > 0.5)
-                        {
-                            rb1.MovePosition(transform.position + movealt * Time.deltaTime * 5);
-                        }
-                        else if (touchDeltaPosition.y < 0.5)
-                        {
-                            rb1.MovePosition(transform.position - movealt * Time.deltaTime * 5);
-                        }
+                        moveEvent.Invoke();
+                        Superscript.TilEmpty++;
+                        Debug.Log("Thie one elly");
                     }
-                }
-                else if (Input.GetTouch(0).phase == TouchPhase.Ended)
-                {
-                    moveEvent.Invoke();
-                    Superscript.TilEmpty++;
-                    Debug.Log("Thie one elly");
                 }
             }
         }

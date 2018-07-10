@@ -76,4 +76,9 @@ public class Viewchanger : MonoBehaviour
         Debug.Log("working");
         Application.Quit();
     }
+
+    public void RevertTime()
+    {
+        Time.timeScale = 1;
+    }
 }
