@@ -17,6 +17,15 @@ public class Agent : MonoBehaviour
     public float dirMax;
     public float dirMin;
 
+    #region ShopSetUps
+    public GameObject ambulance;
+    public GameObject sports;
+    public GameObject police;
+    public GameObject fire;
+    #endregion
+
+
+
     public enum Orientation
     {
         X,
@@ -25,12 +34,56 @@ public class Agent : MonoBehaviour
 
     public Orientation direction;
 
+
+
+    void Awake()
+    {
+      
+        #region ShopSetUps
+
+        if (PlayerPrefs.HasKey("Ambulance"))
+        {
+            if (gameObject.name == "bus" || gameObject.name == "bus (1)" || gameObject.name == "bus (2)")
+            {
+                gameObject.SetActive(false);
+                GameObject newGo = Instantiate(ambulance);
+            }
+        }
+
+        if (PlayerPrefs.HasKey("PoliceCar"))
+        {
+            if (gameObject.name == "car1" || gameObject.name == "car1 (1)")
+            {
+                gameObject.SetActive(false);
+                GameObject newGo = Instantiate(police);
+            }
+        }
+
+        if (PlayerPrefs.HasKey("FireTruck"))
+        {
+            if (gameObject.name == "truck")
+            {
+                gameObject.SetActive(false);
+                GameObject newGo = Instantiate(fire);
+            }
+        }
+
+        if (PlayerPrefs.HasKey("SportCar"))
+        {
+            if (gameObject.name == "agent")
+            {
+                gameObject.SetActive(false);
+                GameObject newGo = Instantiate(sports);
+            }
+        }
+    }
+
+        #endregion
+
+
     void start()
     {
-        if (direction == Orientation.X)
-        {
-
-        }
+        
     }
 
     void Update()

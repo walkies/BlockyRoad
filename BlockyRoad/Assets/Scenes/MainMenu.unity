@@ -266,6 +266,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!1 &85852151
 GameObject:
@@ -825,7 +826,7 @@ GameObject:
   - component: {fileID: 132184869}
   - component: {fileID: 132184868}
   m_Layer: 0
-  m_Name: Image
+  m_Name: PolC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,6 +1129,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!1 &179017318
 GameObject:
@@ -1884,6 +1886,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 286626251}
+  - component: {fileID: 286626253}
+  - component: {fileID: 286626252}
   m_Layer: 0
   m_Name: Ambulance
   m_TagString: Untagged
@@ -1910,6 +1914,64 @@ RectTransform:
   m_AnchoredPosition: {x: 110.485146, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &286626252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286626250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 286626253}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 286626252}
+        m_MethodName: TakeCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 871751803}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  isShop: 1
+  MaxDubbleTapTime: 0.3
+--- !u!65 &286626253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286626250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 500}
+  m_Center: {x: 0, y: -50, z: 0}
 --- !u!1 &287408762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,6 +2166,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!65 &297421559
 BoxCollider:
@@ -2559,6 +2622,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!1 &349012898
 GameObject:
@@ -6180,6 +6244,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 797286036}
+  - component: {fileID: 797286038}
+  - component: {fileID: 797286037}
   m_Layer: 0
   m_Name: PoliceCar
   m_TagString: Untagged
@@ -6206,6 +6272,64 @@ RectTransform:
   m_AnchoredPosition: {x: 204.08081, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &797286037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797286035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 797286038}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 797286037}
+        m_MethodName: TakeCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 132184866}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  isShop: 1
+  MaxDubbleTapTime: 0.3
+--- !u!65 &797286038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 797286035}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 500}
+  m_Center: {x: 0, y: -50, z: 0}
 --- !u!1 &800584937
 GameObject:
   m_ObjectHideFlags: 0
@@ -6410,6 +6534,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!1 &829080856
 GameObject:
@@ -6804,7 +6929,7 @@ GameObject:
   - component: {fileID: 871751806}
   - component: {fileID: 871751805}
   m_Layer: 0
-  m_Name: Image
+  m_Name: AmbC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6873,7 +6998,7 @@ GameObject:
   - component: {fileID: 881551245}
   - component: {fileID: 881551244}
   m_Layer: 0
-  m_Name: Image
+  m_Name: FirC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7426,6 +7551,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!65 &916142070
 BoxCollider:
@@ -7676,6 +7802,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!65 &921080532
 BoxCollider:
@@ -9199,7 +9326,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -168, y: -0.00015258789}
-  m_SizeDelta: {x: -397.7975, y: 100}
+  m_SizeDelta: {x: -399.3315, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1075245187
 MonoBehaviour:
@@ -12081,7 +12208,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -179, y: -0.00015258789}
-  m_SizeDelta: {x: -405.1683, y: 100}
+  m_SizeDelta: {x: -406.6649, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1450353375
 MonoBehaviour:
@@ -13111,6 +13238,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1558334683}
+  - component: {fileID: 1558334685}
+  - component: {fileID: 1558334684}
   m_Layer: 0
   m_Name: FireTruck
   m_TagString: Untagged
@@ -13137,6 +13266,64 @@ RectTransform:
   m_AnchoredPosition: {x: 16.329926, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1558334684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558334682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 1558334685}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1558334684}
+        m_MethodName: TakeCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 881551242}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  isShop: 1
+  MaxDubbleTapTime: 0.3
+--- !u!65 &1558334685
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1558334682}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 500}
+  m_Center: {x: 0, y: -50, z: 0}
 --- !u!1 &1561875172
 GameObject:
   m_ObjectHideFlags: 0
@@ -13782,7 +13969,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -163, y: -0.00015258789}
-  m_SizeDelta: {x: -379.3705, y: 100}
+  m_SizeDelta: {x: -380.99805, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1604493183
 MonoBehaviour:
@@ -14499,6 +14686,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1711384739}
+  - component: {fileID: 1711384741}
+  - component: {fileID: 1711384740}
   m_Layer: 0
   m_Name: SportCar
   m_TagString: Untagged
@@ -14525,6 +14714,64 @@ RectTransform:
   m_AnchoredPosition: {x: -77.90524, y: 0.60414505}
   m_SizeDelta: {x: 1920, y: 1280.0001}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1711384740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711384738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 500, z: 500}
+  m_Center: {x: 0, y: -50, z: 0}
+--- !u!114 &1711384741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1711384738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6afa75579731b9e498f5bb8078c19bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb1: {fileID: 1711384740}
+  myEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1711384741}
+        m_MethodName: TakeCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  myEvent2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1830530981}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  isShop: 1
+  MaxDubbleTapTime: 0.3
 --- !u!1 &1718985702
 GameObject:
   m_ObjectHideFlags: 0
@@ -14998,6 +15245,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!1 &1779163476
 GameObject:
@@ -15596,7 +15844,7 @@ GameObject:
   - component: {fileID: 1830530984}
   - component: {fileID: 1830530983}
   m_Layer: 0
-  m_Name: Image
+  m_Name: SpoC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16059,6 +16307,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  isShop: 0
   MaxDubbleTapTime: 1
 --- !u!1 &1919110613
 GameObject:
@@ -17014,7 +17263,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -181, y: -0.00015258789}
-  m_SizeDelta: {x: -412.5391, y: 100}
+  m_SizeDelta: {x: -413.99826, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1975774528
 MonoBehaviour:

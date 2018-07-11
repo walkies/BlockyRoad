@@ -7,7 +7,6 @@ public class Coins : MonoBehaviour {
 
     public Text coinsText;
 
-    public 
 	void Start ()
     {
 		
