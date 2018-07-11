@@ -8,6 +8,7 @@ public class Loading : MonoBehaviour {
 	void Start ()
     {
         StartCoroutine("FakeLoad");
+
 	}
 	
 

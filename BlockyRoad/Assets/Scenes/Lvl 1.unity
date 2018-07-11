@@ -1147,7 +1147,7 @@ MonoBehaviour:
   sideBounds: -1
   dirMax: 6
   dirMin: 0
-  ambulance: {fileID: 0}
+  ambulance: {fileID: 1787918934343750, guid: e6791421c0e8e0746a2c5546bfff691e, type: 2}
   sports: {fileID: 0}
   police: {fileID: 0}
   fire: {fileID: 0}
@@ -1707,7 +1707,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 302353120}
   m_LocalRotation: {x: 0.61237246, y: 0.3535534, z: 0.61237246, w: 0.3535534}
-  m_LocalPosition: {x: 53.06, y: 73.60671, z: -7.15}
+  m_LocalPosition: {x: 53.06, y: 73.622, z: -7.141}
   m_LocalScale: {x: 0.25, y: 0.2, z: 0.2482872}
   m_Children:
   - {fileID: 1200866923}
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   dirMax: 2
   dirMin: -5
   ambulance: {fileID: 0}
-  sports: {fileID: 0}
+  sports: {fileID: 1465406119924992, guid: 745399aa6ab6de84a8cdcdc7237ec07e, type: 2}
   police: {fileID: 0}
   fire: {fileID: 0}
   direction: 0
@@ -4515,7 +4515,7 @@ MonoBehaviour:
   sideBounds: 1
   dirMax: 6
   dirMin: 0
-  ambulance: {fileID: 0}
+  ambulance: {fileID: 1787918934343750, guid: e6791421c0e8e0746a2c5546bfff691e, type: 2}
   sports: {fileID: 0}
   police: {fileID: 0}
   fire: {fileID: 0}
@@ -6454,6 +6454,10 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158995835120140, guid: 60e49462645111f4986f09d0625527b7, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60e49462645111f4986f09d0625527b7, type: 2}
@@ -9283,7 +9287,7 @@ MonoBehaviour:
   sideBounds: -1
   dirMax: 6
   dirMin: 0
-  ambulance: {fileID: 0}
+  ambulance: {fileID: 1787918934343750, guid: e6791421c0e8e0746a2c5546bfff691e, type: 2}
   sports: {fileID: 0}
   police: {fileID: 0}
   fire: {fileID: 0}

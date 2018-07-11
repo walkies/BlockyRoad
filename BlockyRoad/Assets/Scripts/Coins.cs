@@ -9,8 +9,8 @@ public class Coins : MonoBehaviour {
 
 	void Start ()
     {
-		
-	}
+
+    }
 	
 
 	void Update ()
